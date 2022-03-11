@@ -4,11 +4,11 @@ juramento = "Eu " ++ meuNome ++ " prometo pela minha honra que farei esta avalia
 
 
 {--
-Uma fila é uma estrutura de dados em que elementos são adicionas em uma extremidade e extraídos da outra.
-Por exemplo, iniciando se com uma fila vazia V, 
-- a invocação "enqueue V I" retorna a fila com apenas o item I,
-- a invocação "enqueue (enqueue V I) J" retorna a fila com I seguido de J,
-- a invocação "peek (enqueue (enqueue V I) J" retorna o primeiro item da lista, I
+Uma fila é uma estrutura de dados em que elementos são adicionadas em uma extremidade e extraídos da outra.
+Por exemplo, iniciando se com uma fila vazia V: 0
+- a invocação "enqueue V I" retorna a fila com apenas o item I: I
+- a invocação "enqueue (enqueue V I) J" retorna a fila com I seguido de J: I -> J
+- a invocação "peek (enqueue (enqueue V I) J" retorna o primeiro item da fila, I
 - a invocação "dequeue (enqueue (enqueue V I) J)" retorna a fila apenas o item J.
 
 Questão 1
@@ -34,7 +34,7 @@ Reimplemente as funções, como enqueue'', peek'' e dequeue'', para que trabalhe
 
 {--
 Lista de compras.
-Uma lista de compras possui o nome de um ítem, a quandidade a ser comprada, e uma unidade de medida.
+Uma lista de compras possui o nome de um item, a quantidade a ser comprada, e uma unidade de medida.
 Por exemplo
 
 Banana 1 dúzia
@@ -45,7 +45,7 @@ Carne 1.5 kilograma
 Açucar 5 kilograma
 
 Questão 1
-Defina usando tipos algébricos uma representação para os items de uma lista de compras onde o nome do ítem é uma String,
+Defina usando tipos algébricos uma representação para os items de uma lista de compras onde o nome do item é uma String,
 a quantidade um valor real, e a unidade é uma das seguintes constantes: 
 litro, grama, dúzia, mililitro, kilograma, metro. 
 Inclua também uma forma de representar a ausência de uma unidade, como no caso dos ovos na lista anterior.
@@ -83,16 +83,17 @@ O nó raiz tem prefixo vazio, isto é ""
 Por exemplo,
 
                   ""
+                (False)
            /      |     \
          /        |      \
      "alt"     "bola"    "l"
     (False)    (True)     (False)
-   |     \          \       \    \
- "eres"  "tura"    "da"     "e"   "atão" 
+   |     \          \       |    \
+ "eres"  "tura"    "da"    "e"   "atão" 
 (True)   (True)   (True)  (False) (True)
-                             |       |
-                            "ite"  "tra"
-                           (True)  (True) 
+                          |    \   
+                        "ite"  "tra"
+                       (True)  (True) 
 
 Questão 1
 Defina uma tipo algébrico para representar tries, isto é, árvores em que o nó possui uma string e um booleano, e uma lista de nós filhos.
