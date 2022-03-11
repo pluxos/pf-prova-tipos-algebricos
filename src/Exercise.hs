@@ -18,10 +18,10 @@ Carne 1.5 kilograma
 Açucar 5 kilograma
 
 Questão 1
-Defina um tipo algébrico pra representar items de uma lista de compras onde o nome do ítem é uma String,
-a quantidade um valor real, e a unidade um outro tipo algébrico com pelo menos as seguintes unidades:
-litro, grama, dúzia, mililitro, kilograma, metro. Inclua também uma forma de representar a ausência de uma unidade,
-como no caso dos ovos na lista anterior.
+Defina usando tipos algébricos uma representação para os items de uma lista de compras onde o nome do ítem é uma String,
+a quantidade um valor real, e a unidade é uma das seguintes constantes: 
+litro, grama, dúzia, mililitro, kilograma, metro. 
+Inclua também uma forma de representar a ausência de uma unidade, como no caso dos ovos na lista anterior.
 
 Dica: use a unidade na definição do tipo.
 
