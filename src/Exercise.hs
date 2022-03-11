@@ -3,6 +3,33 @@ meuNome = undefined    -- Coloque seu nome aqui
 juramento = "Eu " ++ meuNome ++ " prometo pela minha honra que farei esta avaliação de forma individual, consultando somente o material disponibilizado pelo professor e material diretamente referenciado no mesmo."
 
 
+{--
+Uma fila é uma estrutura de dados em que elementos são adicionas em uma extremidade e extraídos da outra.
+Por exemplo, iniciando se com uma fila vazia V, 
+- a invocação "enqueue V I" retorna a fila com apenas o item I,
+- a invocação "enqueue (enqueue V I) J" retorna a fila com I seguido de J,
+- a invocação "peek (enqueue (enqueue V I) J" retorna o primeiro item da lista, I
+- a invocação "dequeue (enqueue (enqueue V I) J)" retorna a fila apenas o item J.
+
+Questão 1
+Implemente as funções enqueue, peek e dequeue, considerando que item são Strings.
+
+Questão 2
+Reimplemente as funções, agora com nomes enqueue', peek' e dequeue', considerando que os items são de tipos quaisquer (Strings, ou Int, out Float...)
+
+Questão 3
+Uma fila com prioridade é uma fila em que a ordem é dada pela ordem de inserção e pela prioridade dos itens inseridos.
+Sendo a prioridade dada por um número natural e sendo 0 a maior prioridade, considere os exemplos.
+Iniciando se com uma fila vazia V, 
+- a invocação "enqueue V I 3" retorna a fila com apenas o item (I,3), em que o item I tem prioridade 3
+- a invocação "enqueue (enqueue V I 3) J 4" retorna a fila com (I,3) seguido de (J,4),
+- a invocação "enqueue (enqueue V I 3) J 2" retorna a fila com (J,2) seguido de (I,3),
+- a invocação "enqueue (enqueue V I 3) J 3" retorna a fila com (I,3) seguido de (J,3),
+- as invocações de peek e dequeue funcionam como anteriormente.
+
+Reimplemente as funções, como enqueue'', peek'' e dequeue'', para que trabalhem com prioridades.
+-}
+
 
 
 {--
@@ -77,31 +104,4 @@ Use o tipo definido para representar as seguintes listas de palavras. (ignore ac
 
 Questão 3
 Define uma função que, dado uma árvore de prefixos, imprima todas as palavras representadas pela árvore.
--}
-
-{--
-Uma fila é uma estrutura de dados em que elementos são adicionas em uma extremidade e extraídos da outra.
-Por exemplo, iniciando se com uma fila vazia V, 
-- a invocação "enqueue V I" retorna a fila com apenas o item I,
-- a invocação "enqueue (enqueue V I) J" retorna a fila com I seguido de J,
-- a invocação "peek (enqueue (enqueue V I) J" retorna o primeiro item da lista, I
-- a invocação "dequeue (enqueue (enqueue V I) J)" retorna a fila apenas o item J.
-
-Questão 1
-Implemente as funções enqueue, peek e dequeue, considerando que item são Strings.
-
-Questão 2
-Reimplemente as funções, agora com nomes enqueue', peek' e dequeue', considerando que os items são de tipos quaisquer (Strings, ou Int, out Float...)
-
-Questão 3
-Uma fila com prioridade é uma fila em que a ordem é dada pela ordem de inserção e pela prioridade dos itens inseridos.
-Sendo a prioridade dada por um número natural e sendo 0 a maior prioridade, considere os exemplos.
-Iniciando se com uma fila vazia V, 
-- a invocação "enqueue V I 3" retorna a fila com apenas o item (I,3), em que o item I tem prioridade 3
-- a invocação "enqueue (enqueue V I 3) J 4" retorna a fila com (I,3) seguido de (J,4),
-- a invocação "enqueue (enqueue V I 3) J 2" retorna a fila com (J,2) seguido de (I,3),
-- a invocação "enqueue (enqueue V I 3) J 3" retorna a fila com (I,3) seguido de (J,3),
-- as invocações de peek e dequeue funcionam como anteriormente.
-
-Reimplemente as funções, como enqueue'', peek'' e dequeue'', para que trabalhem com prioridades.
 -}
